@@ -16,8 +16,10 @@ export function buildPlugins({
       filename: "css/[name].[contenthash:8].css",
       chunkFilename: "css/[name].[contenthash:8].css",
     }),
+    // Объявили глобально переменую __IS_DEV__
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin(),
   ];
 }
