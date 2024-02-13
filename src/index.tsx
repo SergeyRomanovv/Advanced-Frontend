@@ -10,7 +10,6 @@ const root = createRoot(container);
 root.render(
     <BrowserRouter>
         <ErrorBoundary>
-
             <ThemeProvider>
                 <App />
             </ThemeProvider>
