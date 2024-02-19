@@ -8,7 +8,7 @@
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error occurred",
   "Обновить страницу": "Refresh the page",
-  "Войти": "Login",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Вы ввели неправильный логин или пароль": "You entered an incorrect username or password"
 }
