@@ -36,7 +36,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'max-len': ['warn', { code: 100, ignoreComments: true }],
+        'max-len': ['warn', { code: 120, ignoreComments: true }],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error',
