@@ -26,7 +26,7 @@ const initialReducers: ReducersList = {
     loginForm: loginReducer,
 };
 
-const LoginForm: FC<LoginFormProps> = memo(({ className, onSuccess }: LoginFormProps) => {
+const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const { t } = useTranslation('LoginForm');
     const dispatch = useAppDispatch();
 

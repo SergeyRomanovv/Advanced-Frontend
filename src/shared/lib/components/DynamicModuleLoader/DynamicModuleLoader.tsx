@@ -24,7 +24,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (
         removeAfterUnmount,
     },
 ) => {
-    const store = useStore() as ReduxStoreWithManeger;
+    const store = useStore() as unknown as ReduxStoreWithManeger;
     const dispatch = useDispatch();
     const { t } = useTranslation();
 

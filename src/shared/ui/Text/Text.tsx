@@ -14,7 +14,7 @@ interface TextProps {
   theme?: TextTheme;
 }
 
-export const Text: FC<TextProps> = memo((props: TextProps) => {
+export const Text = memo((props: TextProps) => {
     const {
         className,
         title,

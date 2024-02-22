@@ -10,7 +10,7 @@ interface InputDefaultProps extends HTMLInputProps {
   onChange?: (value: string) => void;
 }
 
-export const InputDefault: FC<InputDefaultProps> = memo((props: InputDefaultProps) => {
+export const InputDefault = memo((props: InputDefaultProps) => {
     const {
         className,
         value,
