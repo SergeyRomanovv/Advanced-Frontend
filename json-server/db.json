@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Сергей",
+    "lastname": "Александрович",
+    "age": 29,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Bryansk",
+    "username": "admin",
+    "avatar": "https://c0.klipartz.com/pngpicture/407/87/sticker-png-kenny-mccormick-butters-stotch-tweek-tweak-clyde-donovan-kyle-broflovski-fictional-character-cartoon-fruit-kyle-broflovski-matt-stone.png"
+  }
 }
