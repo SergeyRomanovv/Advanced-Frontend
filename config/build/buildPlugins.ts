@@ -4,11 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({
-    paths,
-    isDev,
-    apiURL,
-}: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev, apiUrl }: BuildOptions): webpack.WebpackPluginInstance[] {
     const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
@@ -18,13 +14,13 @@ export function buildPlugins({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css',
         }),
-        // Объявили глобально переменую __IS_DEV__
+        //  Объявляем глобальные переменные
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
-            __API__: JSON.stringify(apiURL),
+            __API__: JSON.stringify(apiUrl),
         }),
-
     ];
+
     if (isDev) {
         plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new BundleAnalyzerPlugin({

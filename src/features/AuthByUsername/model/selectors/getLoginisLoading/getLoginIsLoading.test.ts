@@ -1,8 +1,7 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { DeepPartial } from 'shared/types';
-import { getLoginIsLoading } from './getLoginisLoading';
+import { getLoginIsLoading } from './getLoginIsLoading';
 
-describe('getLoginisLoading.test', () => {
+describe('getLoginIsLoading.test', () => {
     test('should return true', () => {
         const state: DeepPartial<StateSchema> = {
             loginForm: {
