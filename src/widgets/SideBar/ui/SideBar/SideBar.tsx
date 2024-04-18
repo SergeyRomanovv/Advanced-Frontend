@@ -28,11 +28,11 @@ export const SideBar = memo(({ className }: SideBarProps) => {
 
     return (
         <div
-            data-testid="sidebar"
+            data-testid='sidebar'
             className={classNames(cls.SideBar, { [cls.collapsed]: collapsed }, [className])}
         >
             <Button
-                data-testid="sidebar-toggle"
+                data-testid='sidebar-toggle'
                 onClick={onToggle}
                 className={cls.collapseBtn}
                 theme={ButtonTheme.BACKGROUND_INVERTED}

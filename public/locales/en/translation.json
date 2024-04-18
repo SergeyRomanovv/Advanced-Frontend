@@ -5,10 +5,13 @@
   "Главная страница": "Main page",
   "Главная": "Main",
   "О сайте": "About us",
+  "Профиль": "Profile",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error occurred",
   "Обновить страницу": "Refresh the page",
   "increment": "increment",
   "decrement": "decrement",
-  "Вы ввели неправильный логин или пароль": "You entered an incorrect username or password"
+  "Вы ввели неправильный логин или пароль": "You entered an incorrect username or password",
+  "Укажите валюту": "Specify currency",
+  "Укажите страну": "Specify country"
 }
