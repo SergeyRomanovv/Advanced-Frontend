@@ -10,6 +10,11 @@
     "Город": "City",
     "Введите имя пользователя": "Enter your username",
     "Введите ссылку на аватар": "Enter a link to your avatar",
-    "Изображение профиля": "Profile picture"
+    "Изображение профиля": "Profile picture",
+    "Серверная ошибка при сохранении": "Server error when saving",
+    "Некорректный регион": "Invalid region",
+    "Данные не указаны": "Data not provided",
+    "Имя и фамилия обязательны": "First and last name are required",
+    "Некорректный возраст": "Incorrect age"
   }
   
