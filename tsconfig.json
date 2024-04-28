@@ -44,5 +44,9 @@
     "./src/**/*.ts",
     "./src/**/*.tsx",
   ],
-  "exclude": [".fttemplates"]
+  "exclude": [
+    ".fttemplates",
+    "node_modules",
+    "bower_components"
+  ]
 }
