@@ -47,6 +47,8 @@
   "exclude": [
     ".fttemplates",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "jspm_package",
+    "build",
   ]
 }
