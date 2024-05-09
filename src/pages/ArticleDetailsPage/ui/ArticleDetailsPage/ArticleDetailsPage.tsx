@@ -24,7 +24,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
 
     return (
         // eslint-disable-next-line i18next/no-literal-string
-        <div className={classNames(cls.articleDetailsPage, {}, [className])}>
+        <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
             <ArticleDetails id={id} />
         </div>
     );
