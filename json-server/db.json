@@ -16,13 +16,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://c0.klipartz.com/pngpicture/407/87/sticker-png-kenny-mccormick-butters-stotch-tweek-tweak-clyde-donovan-kyle-broflovski-fictional-character-cartoon-fruit-kyle-broflovski-matt-stone.png"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://c0.klipartz.com/pngpicture/407/87/sticker-png-kenny-mccormick-butters-stotch-tweek-tweak-clyde-donovan-kyle-broflovski-fictional-character-cartoon-fruit-kyle-broflovski-matt-stone.png"
     }
   ],
   "profile": {
