@@ -1,3 +1,1 @@
-import ArticlesPage from './ui/ArticlesPage/ArticlesPage';
-
-export { ArticlesPage };
+export { ArticlesPageLazy as ArticlesPage } from './ui/ArticlesPage/ArticlesPage.lazy';
