@@ -1,3 +1,3 @@
 export {
-    ProfilePageAsync as ProfilePage,
-} from './ui/ProfilePage.async';
+    ProfilePageLazy as ProfilePage,
+} from './ui/ProfilePage.lazy';

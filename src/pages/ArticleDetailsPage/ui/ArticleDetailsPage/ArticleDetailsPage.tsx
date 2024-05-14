@@ -24,7 +24,7 @@ const reducers: ReducersList = {
     articleDetailsComments: articleDetailsCommentsReducer,
 };
 
-const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
+const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const { className } = props;
     const { t } = useTranslation('article');
     const { id } = useParams<{id: string}>();
