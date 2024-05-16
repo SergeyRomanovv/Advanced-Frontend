@@ -50,6 +50,10 @@ const article: Article = {
             ],
         },
     ],
+    user: {
+        id: '1',
+        username: 'Sergey Romanov',
+    },
 };
 
 export const Normal = Template.bind({});
