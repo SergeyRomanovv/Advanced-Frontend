@@ -8,7 +8,6 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Page } from 'shared/ui/Page/Page';
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import {
@@ -17,6 +16,7 @@ import {
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 
 interface ArticlesPageProps {
    className?: string;
@@ -50,15 +50,12 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
     );
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initState());
-        dispatch(fetchArticlesList({
-            page: 1,
-        }));
+        dispatch(initArticlesPage());
     });
 
     return (
         // eslint-disable-next-line i18next/no-literal-string
-        <DynamicModuleLoader reducers={redusers}>
+        <DynamicModuleLoader reducers={redusers} removeAfterUnmount={false}>
             <Page
                 className={classNames(cls.articlesPage, {}, [className])}
                 onScrollEnd={onLoadNextPart}
