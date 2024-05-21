@@ -15,6 +15,7 @@ import cls from './Page.module.scss';
 interface PageProps {
     className?: string;
     children: ReactNode;
+    // функция которая отработает когда скролл подойдет к концу
     onScrollEnd?: () => void;
 }
 
@@ -33,6 +34,11 @@ export const Page = memo((props: PageProps) => {
         }));
     }, 500);
 
+    // todo если монитор слишком большой изначально скролл не появляется и функция onScrollEnd никогда не отработает
+    // варианты решения :
+    // 1) Надо увеличить количество итемов
+    // 2) Если нет скролла вызывать подгрузку еще раз
+    // 3) В зависимости от разрешения экарана менять количество отображаемых итемов
     useInfiniteScroll({
         triggerRef,
         wrapperRef,
@@ -50,7 +56,7 @@ export const Page = memo((props: PageProps) => {
             onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef} />
+            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
         </section>
     );
 });
