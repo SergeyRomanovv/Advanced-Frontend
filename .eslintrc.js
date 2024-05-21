@@ -57,6 +57,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'jsx-quotes': ['warn', 'prefer-single'],
+        'arrow-body-style': 'off',
     },
     globals: {
         __IS_DEV__: true,
