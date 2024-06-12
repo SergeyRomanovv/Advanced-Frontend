@@ -14,7 +14,7 @@
     "strict": true,
     "moduleResolution": "node",
     // Для абсолютного импорта
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "*": ["./src/*"]
     },
