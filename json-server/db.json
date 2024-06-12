@@ -593,6 +593,12 @@
       "userId": "1",
       "text": "test TypeScript news",
       "id": "wZ4Iyv9"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "text": "123321",
+      "id": "_r8krDC"
     }
   ]
 }
