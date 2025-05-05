@@ -1,8 +1,7 @@
 import { memo, useCallback } from 'react';
 import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Select } from 'shared/ui/Select/Select';
-import { ListBox } from 'shared/ui/ListBox/ListBox';
+import { ListBox } from 'shared/ui/Popups';
 import { Currency } from '../../model/types/currency';
 import cls from './CurrencySelect.module.scss';
 
