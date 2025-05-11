@@ -70,7 +70,7 @@ module.exports = {
         'no-undef': 'off',
         'jsx-quotes': ['warn', 'prefer-single'],
         'arrow-body-style': 'off',
-        'ulbi-tv-plugin/path-checker': 'error',
+        'ulbi-tv-plugin/path-checker': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
