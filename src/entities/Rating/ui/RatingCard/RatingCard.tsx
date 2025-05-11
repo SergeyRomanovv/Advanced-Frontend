@@ -9,7 +9,7 @@ import { StarRating } from '@/shared/ui/StarRating/StarRating';
 import { Input } from '@/shared/ui/Input/Input';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
-import { Modal } from '@/widgets/Modal';
+import { Modal } from '@/shared/ui/Modal';
 
 interface RatingCardProps {
     className?: string;
