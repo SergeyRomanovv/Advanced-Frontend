@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import {
     getUserAuthData,
@@ -10,8 +10,8 @@ import {
     isUserManager,
     userActions,
 } from '@/entities/User';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
-import { TextTheme, Text } from '@/shared/ui/Text/Text';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+import { TextTheme, Text } from '@/shared/ui/Text';
 import { RoutePath } from '@/shared/const/router';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
