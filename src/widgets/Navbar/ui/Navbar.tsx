@@ -1,14 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import {
     getUserAuthData,
-    isUserAdmin,
-    isUserManager,
-    userActions,
 } from '@/entities/User';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { TextTheme, Text } from '@/shared/ui/Text';
