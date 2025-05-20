@@ -16,20 +16,13 @@ export function buildPlugins(
         project,
     }: BuildOptions,
 ): webpack.WebpackPluginInstance[] {
+    const isProd = !isDev;
+
     const plugins = [
         new HtmlWebpackPlugin({
             template: paths.html,
         }),
         new webpack.ProgressPlugin(),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash:8].css',
-            chunkFilename: 'css/[name].[contenthash:8].css',
-        }),
-        new CopyPlugin({
-            patterns: [
-                { from: paths.locales, to: paths.buildLocales },
-            ],
-        }),
         new CircularDependencyPlugin({
             exclude: /node_modules/,
             failOnError: true,
@@ -57,6 +50,22 @@ export function buildPlugins(
         plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,
         }));
+    }
+
+    if (isProd) {
+        plugins.push(
+            new MiniCssExtractPlugin({
+                filename: 'css/[name].[contenthash:8].css',
+                chunkFilename: 'css/[name].[contenthash:8].css',
+            }),
+        );
+        plugins.push(
+            new CopyPlugin({
+                patterns: [
+                    { from: paths.locales, to: paths.buildLocales },
+                ],
+            }),
+        );
     }
 
     return plugins;
