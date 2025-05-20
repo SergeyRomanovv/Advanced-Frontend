@@ -3,12 +3,12 @@ import { componentRender } from '@/shared/lib/tests/componentRender/componentRen
 import { SideBar } from './SideBar';
 
 describe('Sidebar', () => {
-    test('Test render', () => {
+    test('with only first param', () => {
         componentRender(<SideBar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
-    test('Test toggle', () => {
+    test('test toggle', () => {
         componentRender(<SideBar />);
         const toggleBtn = screen.getByTestId('sidebar-toggle');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
