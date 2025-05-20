@@ -1,7 +1,3 @@
-export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
-export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
-export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
-
 export {
     ArticleDetails,
 } from './ui/ArticleDetails/ArticleDetails';
