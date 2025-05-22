@@ -13,7 +13,7 @@ export const BugButton: FC = () => {
     return (
         <Button
             onClick={onThrow}
-        // eslint-disable-next-line i18next/no-literal-string
+            // eslint-disable-next-line i18next/no-literal-string
         >
             throw error
         </Button>

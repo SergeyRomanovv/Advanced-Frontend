@@ -19,12 +19,7 @@ const options = [
 ];
 
 export const CurrencySelect = memo((props: CurrencySelectProps) => {
-    const {
-        className,
-        value,
-        onChange,
-        readOnly,
-    } = props;
+    const { className, value, onChange, readOnly } = props;
     const { t } = useTranslation();
 
     const mods: Mods = {
@@ -47,7 +42,7 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
             items={options}
             onChange={onChangeHandler}
             readonly={readOnly}
-            direction='top right'
+            direction="top right"
         />
     );
 });
