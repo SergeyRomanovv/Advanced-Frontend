@@ -72,6 +72,15 @@
         "MANAGER"
       ],
       "avatar": "https://klike.net/uploads/posts/2022-07/1657521781_8.jpg"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://avatarko.ru/img/kartinka/11/multfilm_South_Park_Kyle_10024.jpg"
     }
   ],
   "profile": [
