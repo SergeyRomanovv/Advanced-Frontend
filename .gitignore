@@ -26,3 +26,9 @@ yarn-error.log*
 
 #vs code
 /.vscode
+
+# custom
+/storybook-static
+.loki/report.html
+.loki/report.json
+/reports/unit
