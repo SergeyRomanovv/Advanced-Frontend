@@ -48,7 +48,6 @@ files.forEach((sourceFile) => {
 
             const offFunctionProperty = objectOptions.getProperty('off');
             const onFunctionProperty = objectOptions.getProperty('on');
-
             const featureNameProperty = objectOptions.getProperty('name');
 
             const onFunction = onFunctionProperty?.getFirstDescendantByKind(
