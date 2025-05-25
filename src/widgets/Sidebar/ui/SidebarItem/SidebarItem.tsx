@@ -4,15 +4,15 @@ import { useSelector } from 'react-redux';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData } from '@/entities/User';
-import { SideBarItemType } from '../../model/types/sidebar';
-import cls from './SideBarItem.module.scss';
+import { SidebarItemType } from '../../model/types/sidebar';
+import cls from './SidebarItem.module.scss';
 
-interface SideBarItemProps {
-    item: SideBarItemType;
+interface SidebarItemProps {
+    item: SidebarItemType;
     collapsed: boolean;
 }
 
-export const SideBarItem = memo(({ item, collapsed }: SideBarItemProps) => {
+export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
     const { t } = useTranslation();
     const isAuth = useSelector(getUserAuthData);
 
