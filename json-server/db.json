@@ -56,10 +56,11 @@
       "avatar": "https://avatarko.ru/img/kartinka/11/multfilm_South_Park_Kyle_10024.jpg",
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
