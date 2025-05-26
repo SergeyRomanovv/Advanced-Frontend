@@ -1,1 +1,1 @@
-export { ArticleEditPageLazy as ArticleEditPage } from './ui/ArticleEditPage/ArticleEditPage.lazy';
+export { ArticleEditPageAsync as ArticleEditPage } from './ui/ArticleEditPage/ArticleEditPage.async';

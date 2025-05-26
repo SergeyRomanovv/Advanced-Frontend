@@ -1,9 +1,9 @@
-import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text';
-import { ArticleTextBlock } from '../../model/types/article';
+import { Text } from '@/shared/ui/deprecated/Text';
 import cls from './ArticleTextBlockComponent.module.scss';
+import { ArticleTextBlock } from '../../model/types/article';
 
 interface ArticleTextBlockComponentProps {
     className?: string;
@@ -25,9 +25,8 @@ export const ArticleTextBlockComponent = memo(
                     <Text title={block.title} className={cls.title} />
                 )}
                 {block.paragraphs.map((paragraph, index) => (
-                    // eslint-disable-next-line react/no-array-index-key
                     <Text
-                        key={`${index}_${paragraph.charAt(index)}`}
+                        key={paragraph}
                         text={paragraph}
                         className={cls.paragraph}
                     />
