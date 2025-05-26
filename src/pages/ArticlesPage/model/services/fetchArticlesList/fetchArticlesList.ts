@@ -35,7 +35,6 @@ export const fetchArticlesList = createAsyncThunk<
             search,
             type,
         });
-
         const response = await extra.api.get<Article[]>('/articles', {
             params: {
                 _expand: 'user',
@@ -43,7 +42,6 @@ export const fetchArticlesList = createAsyncThunk<
                 _page: page,
                 _sort: sort,
                 _order: order,
-                // Поисковая строка
                 q: search,
                 type: type === ArticleType.ALL ? undefined : type,
             },
@@ -58,6 +56,3 @@ export const fetchArticlesList = createAsyncThunk<
         return rejectWithValue('error');
     }
 });
-function useSelector(getArticlesPageSort: any) {
-    throw new Error('Function not implemented.');
-}

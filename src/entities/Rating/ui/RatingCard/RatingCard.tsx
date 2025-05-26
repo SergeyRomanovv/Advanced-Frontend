@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
-import { Card } from '@/shared/ui/Card';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
-import { StarRating } from '@/shared/ui/StarRating';
-import { Input } from '@/shared/ui/Input';
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
-import { Drawer } from '@/shared/ui/Drawer';
-import { Modal } from '@/shared/ui/Modal';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { Text } from '@/shared/ui/deprecated/Text';
+import { StarRating } from '@/shared/ui/deprecated/StarRating';
+import { Modal } from '@/shared/ui/deprecated/Modal';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Drawer } from '@/shared/ui/deprecated/Drawer';
 
 interface RatingCardProps {
     className?: string;
@@ -70,9 +70,9 @@ export const RatingCard = memo((props: RatingCardProps) => {
     );
 
     return (
-        <Card max className={className} data-testid="RatingCard">
+        <Card className={className} max data-testid="RatingCard">
             <VStack align="center" gap="8" max>
-                <Text title={starsCount ? t('Спасибо за оценку') : title} />
+                <Text title={starsCount ? t('Спасибо за оценку!') : title} />
                 <StarRating
                     selectedStars={starsCount}
                     size={40}

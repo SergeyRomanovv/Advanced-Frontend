@@ -1,33 +1,32 @@
-/* eslint-disable i18next/no-literal-string */
-import { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { Avatar } from '@/shared/ui/Avatar';
+import { Text, TextAlign, TextSize } from '@/shared/ui/deprecated/Text';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
-import { Icon } from '@/shared/ui/Icon';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
-import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
-import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { Icon } from '@/shared/ui/deprecated/Icon';
+import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { ArticleBlockType } from '../../model/consts/articleConsts';
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
+import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
+import cls from './ArticleDetails.module.scss';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
-import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
-import cls from './ArticleDetails.module.scss';
-import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import { ArticleBlock } from '../../model/types/article';
-import { ArticleBlockType } from '../../model/consts/articleConsts';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -40,7 +39,7 @@ const reducers: ReducersList = {
 
 export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     const { className, id } = props;
-    const { t } = useTranslation('article');
+    const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const isLoading = useSelector(getArticleDetailsIsLoading);
     const article = useSelector(getArticleDetailsData);
@@ -104,8 +103,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         content = (
             <Text
                 align={TextAlign.CENTER}
-                title={t('Произошла ошибка при загрузке статьи')}
-                // text={}
+                title={t('Произошла ошибка при загрузке статьи.')}
             />
         );
     } else {

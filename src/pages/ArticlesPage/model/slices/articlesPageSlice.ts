@@ -4,13 +4,13 @@ import {
     PayloadAction,
 } from '@reduxjs/toolkit';
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localStorage';
 import {
     Article,
     ArticleType,
     ArticleView,
     ArticleSortField,
 } from '@/entities/Article';
+import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types/sort';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
@@ -33,13 +33,12 @@ const articlesPageSlice = createSlice({
         view: ArticleView.SMALL,
         page: 1,
         hasMore: true,
+        _inited: false,
         limit: 9,
         sort: ArticleSortField.CREATED,
         search: '',
         order: 'asc',
         type: ArticleType.ALL,
-
-        _inited: false,
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
@@ -69,9 +68,7 @@ const articlesPageSlice = createSlice({
                 ARTICLES_VIEW_LOCALSTORAGE_KEY,
             ) as ArticleView;
             state.view = view;
-            // Количество подгрузки в пагинации
             state.limit = view === ArticleView.BIG ? 4 : 9;
-            // Прошла первая загрузка, инициализирован
             state._inited = true;
         },
     },
@@ -80,14 +77,14 @@ const articlesPageSlice = createSlice({
             .addCase(fetchArticlesList.pending, (state, action) => {
                 state.error = undefined;
                 state.isLoading = true;
-            })
-            .addCase(fetchArticlesList.fulfilled, (state, action) => {
-                state.isLoading = false;
-                state.hasMore = action.payload.length >= state.limit;
 
                 if (action.meta.arg.replace) {
                     articlesAdapter.removeAll(state);
                 }
+            })
+            .addCase(fetchArticlesList.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.hasMore = action.payload.length >= state.limit;
 
                 if (action.meta.arg.replace) {
                     articlesAdapter.setAll(state, action.payload);

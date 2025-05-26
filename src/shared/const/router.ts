@@ -8,7 +8,7 @@ export enum AppRoutes {
     ARTICLE_EDIT = 'article_edit',
     ADMIN_PANEL = 'admin_panel',
     FORBIDDEN = 'forbidden',
-    // последний
+    // last
     NOT_FOUND = 'not_found',
 }
 

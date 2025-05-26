@@ -1,8 +1,8 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text';
-import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/deprecated/Text';
+import { VStack } from '@/shared/ui/deprecated/Stack';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Comment } from '../../model/types/comment';
 
@@ -13,8 +13,8 @@ interface CommentListProps {
 }
 
 export const CommentList = memo((props: CommentListProps) => {
-    const { className, comments, isLoading } = props;
-    const { t } = useTranslation('article');
+    const { className, isLoading, comments } = props;
+    const { t } = useTranslation();
 
     if (isLoading) {
         return (

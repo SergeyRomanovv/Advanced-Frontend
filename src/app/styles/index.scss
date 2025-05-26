@@ -7,42 +7,42 @@
 .app,
 .app_modal,
 .app_drawer {
-  font: var(--font-m);
-  color: var(--primary-color);
+    font: var(--font-m);
+    color: var(--primary-color);
 }
 
 .app {
-  background: var(--bg-color);
-  min-height: 100vh;
+    background: var(--bg-color);
+    min-height: 100vh;
 }
 
 .app_redesigned {
-  background: var(--bg-redesigned);
-  min-height: 100vh;
-  font: var(--font-m-redesigned);
-  color: var(--text-redesigned);
+    background: var(--bg-redesigned);
+    min-height: 100vh;
+    font: var(--font-m-redesigned);
+    color: var(--text-redesigned);
 }
 
 .content-page {
-  display: flex;
+    display: flex;
 }
 
 *::-webkit-scrollbar {
-  /* ширина scrollbar */
-  width: 12px;
-  height: 8px;
+    width: 12px;
+    /* ширина scrollbar */
+    height: 8px;
 }
 
 *::-webkit-scrollbar-track {
-  /* цвет дорожки */
-  background: var(--card-bg);
+    background: var(--card-bg);
+    /* цвет дорожки */
 }
 
 *::-webkit-scrollbar-thumb {
-  /* цвет плашки */
-  background-color: var(--inverted-primary-color);
-  /* закругления плашки */
-  border-radius: 20px;
-  /* padding вокруг плашки */
-  border: 2px solid var(--primary-color);
+    background-color: var(--inverted-primary-color);
+    /* цвет плашки */
+    border-radius: 20px;
+    /* закругления плашки */
+    border: 2px solid var(--primary-color);
+    /* padding вокруг плашки */
 }

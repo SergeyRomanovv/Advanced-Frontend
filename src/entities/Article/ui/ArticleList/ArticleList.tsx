@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/Text';
+import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 import { ArticleView } from '../../model/consts/articleConsts';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -17,10 +17,15 @@ interface ArticleListProps {
 }
 
 const getSkeletons = (view: ArticleView) =>
-    new Array(view === ArticleView.SMALL ? 9 : 3).fill(0).map((item, index) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
-    ));
+    new Array(view === ArticleView.SMALL ? 9 : 3)
+        .fill(0)
+        .map((item, index) => (
+            <ArticleListItemSkeleton
+                className={cls.card}
+                key={index}
+                view={view}
+            />
+        ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
