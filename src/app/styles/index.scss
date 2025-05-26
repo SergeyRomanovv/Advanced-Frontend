@@ -28,21 +28,21 @@
 }
 
 *::-webkit-scrollbar {
-    width: 12px;
     /* ширина scrollbar */
+    width: 12px;
     height: 8px;
 }
 
 *::-webkit-scrollbar-track {
-    background: var(--card-bg);
     /* цвет дорожки */
+    background: var(--card-bg);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--inverted-primary-color);
     /* цвет плашки */
-    border-radius: 20px;
+    background-color: var(--inverted-primary-color);
     /* закругления плашки */
-    border: 2px solid var(--primary-color);
+    border-radius: 20px;
     /* padding вокруг плашки */
+    border: 2px solid var(--primary-color);
 }
