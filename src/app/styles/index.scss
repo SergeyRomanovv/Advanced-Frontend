@@ -30,16 +30,16 @@
 
 *::-webkit-scrollbar-track {
     /* цвет дорожки */
-    background: var(--card-bg);
+    background: var(--light-bg-redesigned);
 }
 
 *::-webkit-scrollbar-thumb {
     /* цвет плашки */
-    background-color: var(--inverted-primary-color);
+    background-color: var(--icon-redesigned);
     /* закругления плашки */
     border-radius: 20px;
     /* padding вокруг плашки */
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--accent-redesigned);
 }
 
 .app *::-webkit-scrollbar {
